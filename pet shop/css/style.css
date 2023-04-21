@@ -1,0 +1,376 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"); */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  /* padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; */
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  /* -webkit-transition: .2s linear; */
+  transition: .2s linear;
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #130f40;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+
+.header {
+  background: #fff;
+  display: flex;
+          align-items: center;
+          justify-content: space-between;
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
+}
+
+.header.active {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #130f40;
+  font-weight: bolder;
+}
+
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #666;
+}
+
+.header .navbar a:hover {
+  color: #e67e22;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: #130f40;
+  cursor: pointer;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #e67e22;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  width: 35rem;
+  border-radius: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: none;
+}
+
+.header .login-form.active {
+  display: block;
+  -webkit-animation: fadeIn .4s linear;
+          animation: fadeIn .4s linear;
+}
+
+.header .login-form h3 {
+  color: #130f40;
+  font-size: 2.5rem;
+  padding-bottom: .5rem;
+}
+
+.header .login-form .box {
+  width: 100%;
+  border-bottom: 0.2rem solid #130f40;
+  border-width: .1rem;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  color: #130f40;
+  text-transform: none;
+  margin: 1rem 0;
+}
+
+.header .login-form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.header .login-form .remember label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.header .login-form .btn {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.header .login-form .btn:hover {
+  background: #130f40;
+}
+
+.header .login-form .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.header .login-form .links a {
+  font-size: 1.4rem;
+  color: #e67e22;
+}
+
+.header .login-form .links a:hover {
+  color: #130f40;
+  text-decoration: underline;
+}
+
+#menu-btn {
+  display: none;
+}
+.home {
+  min-height: 70vh;
+  display: flex;
+          justify-content: center;
+  /* background: url(../image/image-top.jpg) no-repeat; */
+  background-color: #4999aa;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.home .content {
+  width: 50%;
+}
+
+.home .content h3 {
+  margin-top: 85px;
+  font-size: 6rem;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.home .content h3 span {
+  color: rgba(37, 37, 37, 0.627);
+}
+
+.home .content .btn {
+  color:black;
+  border-color:black;
+}
+
+
+.home .content .btn::before {
+  background: #4999aa;
+}
+body{
+  background-image: linear-gradient(white,rgb(91, 91, 193));
+}
+
+.home .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 19rem;
+}
+.cards{
+  padding:0px 80px;
+}
+.content img{
+  width:30%;
+}
+.qr {
+  display: flex;
+          align-items: center;
+      flex-wrap: wrap;
+}
+
+.qr .content h3 {
+  color: #130f40;
+  font-size: 4rem;
+}
+
+.qr .content h3 span {
+  color: #e67e22;
+}
+
+.qr .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.qr1 .image, .content{
+  width:50%;
+}
+.qr2 .image, .content{
+  width:50%;
+}
+.qr1,
+.qr2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+      flex-wrap: wrap;
+}
+
+
+.qr1 .image img,
+.qr2 .image img {
+  width: 50%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.qr1 .content,
+.qr2 .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.qr1 .content h3,
+.qr2 .content h3 {
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.qr1 .content h3 span,
+.qr2 .content h3 span {
+  color: #e67e22;
+}
+
+.qr1 .content p,
+.qr2 .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  color: #392c2c;
+  font-size: 1.6rem;
+}
+
+.qr1 .content a:hover img,
+/* .qr2 .content a:hover img {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+} */
+
+.qr2 {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+
+.footer {
+  position: relative;
+  background: url(../image/footer_background.jpg) no-repeat;
+  background-position: center;
+  background-size: center;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.footer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+}
+
+
+.footer .share a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer .share a:hover {
+  color: #130f40;
+}
+
+/* .footer .share a::before {
+  background: #fff;
+} */
+
+.footer .credit {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  margin-top: 2.5rem;
+}
+
+.footer .credit span {
+  color: #e67e22;
+}
+
+.flex {
+  display: flex !important;
+}
